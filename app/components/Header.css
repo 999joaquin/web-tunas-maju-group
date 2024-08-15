@@ -1,0 +1,31 @@
+/* app/components/Header.css */
+.link {
+    position: relative;
+  }
+  
+  .link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .link.active::after {
+    opacity: 1;
+    animation: fadeOut 1s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
